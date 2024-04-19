@@ -16,7 +16,7 @@
 
 ## Usage
 
- - git clone 
+ - git clone https://github.com/Shymaa2611/Django-project-celery.git
  - pip install -r requirements.txt
  - python manage.py runsever
 
