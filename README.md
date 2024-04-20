@@ -3,13 +3,13 @@
 
  ## Objective Of Project 
  - Using Django Optimization Techniques :- 
-          1- celery and redis to handle background tasks that take long time to process .
-          2- debug-toolbar that helps to identify the part of code that need to optimize .
-          3- code profiling technique used to determine how programs use resources such as 
+           - celery and redis to handle background tasks that take long time to process .
+           - debug-toolbar that helps to identify the part of code that need to optimize .
+           - code profiling technique used to determine how programs use resources such as 
              RAM,time to execute, etc.
-          4- Sentry provides a diagnostic metric that shows you where your application is slow 
+           -  Sentry provides a diagnostic metric that shows you where your application is slow 
              and how to solve it. It does this by showing a performance dashboard that features the total time taken by each request-response cycle as well as the level of satisfaction of your users.
- 
+ </h2>
 
 ## Technologies  
  - Django
