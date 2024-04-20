@@ -13,11 +13,13 @@ urlpatterns = [
     ), name='api_schema'),
     path('admin/', admin.site.urls),
     path('',include('blog.urls')),
+    path('silk/', include('silk.urls', namespace='silk')),
    
     path('docs/', TemplateView.as_view(
         template_name='documentation.html',
         extra_context={'schema_url':'api_schema'}
         ), name='swagger-ui'),
+    path('__debug__/', include('debug_toolbar.urls'))
    
 ]
 # Media setting #s

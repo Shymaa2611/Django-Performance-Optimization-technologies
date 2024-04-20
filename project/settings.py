@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
      'rest_framework',
-     'rest_framework_swagger'
+     'rest_framework_swagger',
+     "debug_toolbar",
+      'silk'
 ]
 
 CELERY_BROKER_URL = 'redis://localhost:6379/0' 
@@ -53,6 +55,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
+    'silk.middleware.SilkyMiddleware'
 ]
 
 ROOT_URLCONF = 'project.urls'
@@ -60,6 +64,14 @@ ROOT_URLCONF = 'project.urls'
 
 WSGI_APPLICATION = 'project.wsgi.application'
 
+import sentry_sdk
+
+sentry_sdk.init(
+    dsn="https://examplePublicKey@o0.ingest.sentry.io/0",
+    enable_tracing=True,
+)
+
+traces_sample_rate=1.0,
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -70,6 +82,12 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1",
+    # ...
+]
 
 
 # Password validation

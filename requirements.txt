@@ -2,3 +2,7 @@ Django==4.2.3
 djangorestframework==3.14.0
 celery[redis]
 django-rest-swagger
+pyyaml
+django-debug-toolbar
+django_silk
+sentry-sdk
