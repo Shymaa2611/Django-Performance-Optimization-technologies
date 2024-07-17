@@ -29,7 +29,7 @@
  - celery -A project worker --loglevel=info  
 
 ## Run Project
- - python mangae.py runserver 
+ - python manage.py runserver 
 
 
 ## Endpoint urls
